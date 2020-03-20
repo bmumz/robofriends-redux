@@ -1,5 +1,4 @@
 h1 {
   font-family: "Bungee Inline", cursive;
-  letter-spacing: 1rem;
   src: local("BungeeInline"), url("BungeeInline.ttf"), format("ttf");
 }
