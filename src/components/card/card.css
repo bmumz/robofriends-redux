@@ -1,0 +1,11 @@
+.cardContainer {
+  min-width: 18%;
+  min-height: 25%;
+
+  font-size: 12px;
+}
+
+.img {
+  width: 150px;
+  height: auto;
+}

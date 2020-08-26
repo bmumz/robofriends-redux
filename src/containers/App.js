@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CardList from "../components/CardList";
+import CardList from "../components/card/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -10,23 +10,23 @@ class App extends Component {
     super();
     this.state = {
       robots: [],
-      searchfield: ""
+      searchfield: "",
     };
   }
 
   componentDidMount() {
     fetch("http://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(users => this.setState({ robots: users }));
+      .then((response) => response.json())
+      .then((users) => this.setState({ robots: users }));
   }
 
-  onSearchChange = event => {
+  onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value });
   };
 
   render() {
     const { robots, searchfield } = this.state;
-    const filteredRobots = robots.filter(robot => {
+    const filteredRobots = robots.filter((robot) => {
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     });
 
